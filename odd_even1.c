@@ -5,6 +5,7 @@ division and (ii) bit testing. The integer has to be taken as input from the con
 #include<stdio.h>
 #include<math.h>
 
+/*
 int int_to_bin(int n, int i)
 {
     if( n == 0 )
@@ -13,10 +14,10 @@ int int_to_bin(int n, int i)
     }
     return int_to_bin( n / 2, i * 10 ) + ( n % 2 ) * i ;
 }
-
+*/
 int main()
 {
-    int n,ch,bin;
+    int n,ch;//int bin
     printf("Enter your choice '1' or '2' and the number consecutively :");
     scanf("%d %d", &ch , &n );
     switch (ch)
@@ -28,11 +29,17 @@ int main()
             printf("%d is odd.\n",n);
         break;
     case 2:
+        if(n&1)
+            printf("%d is odd.\n",n);
+        else
+            printf("%d is even.\n",n);
+        /*
         bin = int_to_bin(n,1);
         if( ( bin % 10 ) == 0 )
             printf("%d is even.\n",n);
         else
             printf("%d is odd.\n",n);
+        */
         break;
     default:
         printf("Invalid Input");

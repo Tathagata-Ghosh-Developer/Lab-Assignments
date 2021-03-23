@@ -38,7 +38,7 @@ int main()
     printf("Enter the strings at max of length of 12 characters each : ");
     for( int i = 0 ; i < n ; i++ )
     {
-        gets(a[i]);
+        scanf("%s",a[i]);
     }
     sort( a , n );
     for( int i = 0 ; i < n ; i++ )
